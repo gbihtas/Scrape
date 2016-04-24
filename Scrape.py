@@ -13,7 +13,8 @@ class Scrape(object):
 
     def get_elems(self, xpath):
         """
-        This method gets the data of all element which have the given xpath
+        This method gets and returns the data of all elements
+        which have the given xpath
         """
         elems = []
         data = self.tree.xpath(xpath)
