@@ -3,13 +3,8 @@ import requests
 
 
 class Scrape(object):
-    """Scrapes a page getting the following info:
-        1. title of product
-        2. link of product
-        3. unit price of product
-        4. size of the linked HTML
-
-        Moreover, it follows the product's link to get its description.
+    """
+    Scrapes a page and returns all elements as specified by xpath
     """
     def __init__(self, url):
         self.url = url
@@ -18,8 +13,7 @@ class Scrape(object):
 
     def get_elems(self, xpath):
         """
-        This method get the data based of all element which have the
-        given xpath
+        This method gets the data of all element which have the given xpath
         """
         elems = []
         data = self.tree.xpath(xpath)
